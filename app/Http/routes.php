@@ -11,4 +11,17 @@
 |
 */
 
+/*
+ * Home page (articles list)
+ */
 $app->get('/', 'ArticlesController@index');
+
+/*
+ * new article
+ */
+$app->get('articles/create', 'ArticlesController@create');
+
+/*
+ * save new article
+ */
+$app->post('articles', 'ArticlesController@store');

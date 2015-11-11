@@ -112,5 +112,5 @@ The **controllers** of the application lives in the **app/Http/Controllers** fol
 ### Services
 
 There are only one service created for this sample app. The **Articles Validation Service** 
-(app/Services/Validation/ArticlesValidation.php) is responsible for validate the *Articles** persistence operations and 
+(app/Services/Validation/ArticlesValidation.php) is responsible for validate the **Articles** persistence operations and 
 are located in the **app/Services/Validation/** directory.

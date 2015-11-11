@@ -13,10 +13,14 @@ A Sample MVC Application built on top of Lumen PHP Framework
 ## Instalattion
 
 Clone the remote repository:  
+```
     git clone https://github.com/GilTSN/mvc-sample-app.git
+```
     
 Install the dependencies running:  
+```
     composer install  
+```
 inside the project root folder
 
 ## Configuration
@@ -40,7 +44,9 @@ QUEUE_DRIVER=database
 ### Creating the tables
 
 Create the application db tables running:  
+```
     php artisan migrate  
+```
 from the command line inside the project root folder
 
 ### Giving the necessary folders permissions
@@ -62,27 +68,27 @@ The following routes and features are available in the application:
 *Method:* 'GET'
 
 ##### Creates a new article
-*Pattern:* 'articles/create'
+*Pattern:* 'articles/create'  
 *Method:* 'GET'
 
 ##### Stores an article in the database
-*Pattern:* 'articles'
+*Pattern:* 'articles'  
 *Method:* 'POST'
 
 ##### Shows an article
-*Pattern:* 'articles/{id}'
+*Pattern:* 'articles/{id}'  
 *Method:* 'GET'
 
 ##### Edits an article
-*Pattern:* 'articles/{id}/edit'
+*Pattern:* 'articles/{id}/edit'  
 *Method:* 'GET'
 
 ##### Updates an article in the database
-*Pattern:* 'articles/{id}'
+*Pattern:* 'articles/{id}'  
 *Method:* 'PUT'
 
 ##### Deletes an article from the database
-*Pattern:* 'articles/{id}'
+*Pattern:* 'articles/{id}'  
 *Method:* 'DELETE'
 
 ### Models

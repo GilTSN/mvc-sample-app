@@ -25,3 +25,23 @@ $app->get('articles/create', 'ArticlesController@create');
  * save new article
  */
 $app->post('articles', 'ArticlesController@store');
+
+/*
+ * show article
+ */
+$app->get('articles/{id}', 'ArticlesController@show');
+
+/*
+ * edit an article
+ */
+$app->get('articles/{id}/edit', 'ArticlesController@edit');
+
+/*
+ * update an article
+ */
+$app->put('articles/{id}', 'ArticlesController@update');
+
+/*
+ * delete an article
+ */
+$app->delete('articles/{id}', 'ArticlesController@delete');

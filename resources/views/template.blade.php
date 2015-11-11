@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title') | MVC Sample App</title>
 
-    <!-- Bootstrap -->
+    <!-- css -->
     <link href="{{ app('url')->asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -40,10 +40,8 @@
         <!-- ./dynamic content -->
     </div>
 
-    <!-- jQuery -->
+    <!-- js -->
     <script src="{{ app('url')->asset('assets/js/jquery-1.11.3.min.js') }}"></script>
-
-    <!-- Bootstrap -->
     <script src="{{ app('url')->asset('assets/js/bootstrap.min.js') }}"></script>
 </body>
 </html>

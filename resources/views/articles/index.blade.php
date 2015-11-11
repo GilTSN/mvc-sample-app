@@ -30,17 +30,21 @@
             @else
                 @foreach ($articles as $article)
                     <tr>
-                        <td>{{ $article->title }}</td>
+                        <td><a href="{{ app('url')->to('articles/' . $article->id) }}">{{ $article->title }}</a></td>
                         <td>
-                            <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-sm" title="Editar">
-                                    <i class="glyphicon glyphicon-edit"></i>
-                                </a>
-
-                                <a href="#" class="btn btn-default btn-sm" title="Excluir">
+                            <form action="{{ app('url')->to('articles/' . $article->id) }}" class="pull-right"
+                                  method="post" onsubmit="return confirm('Confirma a exclusão?');">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <button type="submit" class="btn btn-default btn-sm" title="Excluir">
                                     <i class="glyphicon glyphicon-trash"></i>
-                                </a>
-                            </div>
+                                </button>
+                            </form>
+
+                            <a href="{{ app('url')->to('articles/' . $article->id . '/edit') }}"
+                               class="btn btn-default btn-sm pull-right" title="Editar" style="margin-right: 10px;">
+                                <i class="glyphicon glyphicon-edit"></i>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

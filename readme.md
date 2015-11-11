@@ -25,7 +25,7 @@ inside the project root folder
 
 ## Configuration
 
-To configure the application is necessary to create a file named *.env* in the root directory with the following params:  
+To configure the application is necessary to create a file named **.env** in the root directory with the following params:  
 APP_ENV=local  
 APP_DEBUG=true  
 APP_KEY={some 32 random string}  
@@ -51,59 +51,66 @@ from the command line inside the project root folder
 
 ### Giving the necessary folders permissions
 
-Is necessary to give *write* and *read* permissions to the */storage* folder.
+Is necessary to give *write* and *read* permissions to the **/storage** folder.
 
 ## Application Structure
 
 ### Routes
 
-The routes of the application are defined in the *app/Http/routes.php* file.
+The routes of the application are defined in the **app/Http/routes.php** file.
 
 #### Available routes and features
 
 The following routes and features are available in the application:  
 
 ##### Lists the registered articles
-*Pattern:* '/'  
-*Method:* 'GET'
+**Pattern:** '/'  
+**Method:** 'GET'
 
 ##### Creates a new article
-*Pattern:* 'articles/create'  
-*Method:* 'GET'
+**Pattern:** 'articles/create'  
+**Method:** 'GET'
 
 ##### Stores an article in the database
-*Pattern:* 'articles'  
-*Method:* 'POST'
+**Pattern:** 'articles'  
+**Method:** 'POST'
 
 ##### Shows an article
-*Pattern:* 'articles/{id}'  
-*Method:* 'GET'
+**Pattern:** 'articles/{id}'  
+**Method:** 'GET'
 
 ##### Edits an article
-*Pattern:* 'articles/{id}/edit'  
-*Method:* 'GET'
+**Pattern:** 'articles/{id}/edit'  
+**Method:** 'GET'
 
 ##### Updates an article in the database
-*Pattern:* 'articles/{id}'  
-*Method:* 'PUT'
+**Pattern:** 'articles/{id}'  
+**Method:** 'PUT'
 
 ##### Deletes an article from the database
-*Pattern:* 'articles/{id}'  
-*Method:* 'DELETE'
+**Pattern:** 'articles/{id}'  
+**Method:** 'DELETE'
 
 ### Models
 
-The *models* of the application lives in the *app/Models* folder.
+The **models** of the application lives in the **app/Models** folder.
 
 ### Views
 
-The *views* of the application lives in the *resources/views* folder.
+The **views** of the  application are located in the **resources/views/** directory:  
+* **template.blade.php** is the template of the app
+* The **articles/index.blade.php** view is responsible for show the articles list interface to the user and the main 
+operations related to the articles (create, show, update and delete)
+* The **articles/create.blade.php** view shows the form to create a new article
+* The **articles/show.blade.php** view shows an article to the user
+* The **articles/edit.blade.php** view shows a form to edit an article
 
 ### Controllers
 
-The *controllers* of the application lives in the *app/Http/Controllers* folder.
+The **controllers** of the application lives in the **app/Http/Controllers** folder.
 
 ### Services
 
-There are only one service created for this sample app. The *Articles Validation Service* is responsible for validate the 
-*Articles* persistence operations and are located in the *app/Services/Validation/* directory.
+There are only one service created for this sample app. The **Articles Validation Service** 
+(app/Services/Validation/ArticlesValidation.php) is responsible for validate the *Articles** persistence operations and 
+are located in the **app/Services/Validation/** directory.
